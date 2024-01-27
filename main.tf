@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     snowflake = {
-      source = "Snowflake-Labs/snowflake"
+      source  = "Snowflake-Labs/snowflake"
       version = "~> 0.76"
     }
   }
@@ -16,7 +16,7 @@ resource "snowflake_database" "db" {
 }
 
 resource "snowflake_warehouse" "warehouse" {
-  name           = "TF_DEMO_WH"
-  warehouse_size = "small"
-  auto_suspemnd  = 60
+  name           = "TF_DEMO"
+  warehouse_size = "large"
+  auto_suspend   = 60
 }
